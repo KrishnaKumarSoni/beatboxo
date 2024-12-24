@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatbox Looper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Beatbox Looper</h1>
+            <div class="global-controls">
+                <button id="globalRecord" class="btn-record" title="Record Mix">
+                    <i class="fas fa-circle"></i>
+                </button>
+                <button id="globalPlay" class="btn-play" disabled title="Play Mix">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="channels-container">
+            <!-- Channels will be dynamically created here -->
+        </div>
+
+        <div id="globalMixWaveform" class="global-waveform"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/audioEngine.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/waveformUI.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/effects.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
